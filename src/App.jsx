@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React, { useEffect } from 'react';
 function App() {
+  const a = function () {
+    return 1;
+  };
+  useEffect(() => {
+    a();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +15,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <div>asdf</div>
         <a
           className="App-link"
           href="https://reactjs.org"
