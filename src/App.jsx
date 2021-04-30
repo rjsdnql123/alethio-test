@@ -1,30 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect } from 'react';
+import { Route } from 'react-router-dom';
+import Header from './Component/Header/Header';
+import Login from './Component/Login/Login';
+import SignUp from './Component/SignUp/SignUp';
+import MyPage from './Component/MyPage/MyPage';
+
 function App() {
-  const a = function () {
-    return 1;
-  };
-  useEffect(() => {
-    a();
-  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <div>asdf</div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <div className="App-header">
+        <Route exact path="/" component={Login} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={Login} />
+        <Route path="/mypage" component={MyPage} />
+      </div>
     </div>
   );
 }
