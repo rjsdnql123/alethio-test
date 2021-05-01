@@ -13,9 +13,10 @@ const initialState = {
          reducers: {
             setToken(state,action) {
                 //로그인 회원가입 성공시 불러오기
-
+                state.token = action.payload
             },
             loginError(state,action) {
+                state.error = action.payload
                 //회원가입 로그인 실패시
             },
             loginaction(state){

@@ -6,7 +6,7 @@ import Header from './Component/Header/Header';
 import Login from './Component/Login/Login';
 import SignUp from './Component/SignUp/SignUp';
 import MyPage from './Component/MyPage/MyPage';
-
+import LoginView from './feature/loginForm/loginForm';
 function App() {
   return (
     <div className="App">
@@ -14,7 +14,7 @@ function App() {
       <div className="App-header">
         <Route exact path="/" component={Login} />
         <Route path="/signup" component={SignUp} />
-        <Route path="/login" component={Login} />
+        <Route path="/login" component={LoginView} />
         <Route path="/mypage" component={MyPage} />
       </div>
     </div>
